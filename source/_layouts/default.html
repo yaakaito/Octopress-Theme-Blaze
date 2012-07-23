@@ -8,9 +8,8 @@
     {{ content | expand_urls: root_url }}
   </div>
   <aside role="complementary">
-    
+    {% include aside.html %}    
   </aside>
   <footer role="contentinfo">{% include footer.html %}</footer>
-  {% include after_footer.html %}
 </body>
 </html>
