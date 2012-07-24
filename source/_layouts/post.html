@@ -9,7 +9,7 @@ single: true
   {% else %}
     <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
   {% endif %}
-  <aside role="complementary">
+  <aside class="categories" role="complementary">
      {% include post/categories.html %}    
   </aside> 
   {% include article.html %}
