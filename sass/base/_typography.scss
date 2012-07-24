@@ -13,16 +13,7 @@ body {
       }
     }
   }
-  > h1 {
-    color: $secondary-color-A;
-    a {
-      color: $secondary-color-A;
-      text-decoration: none;
-      &:hover {
-        color: $secondary-dark-color-A;
-      }
-    }
-  }
+
   time {
     color: $time-color;
     font-family: $time-font-family;
@@ -35,21 +26,29 @@ article {
   }
 
   >  h1 {
+    color: $secondary-color-B;
     font-size: 2em;
     &:first-letter {
       font-size: 1.5em;
+    }
+    a {
+      color: $secondary-color-B;
+      text-decoration: none;
+      &:hover {
+        color: $secondary-dark-color-B;
+      }
     }
   }
 
   aside {
     li {
-      color: $secondary-color-B;
+      color: $secondary-color-A;
       font-weight: bold;
       a {
-        color: $secondary-color-B;  
+        color: $secondary-color-A;  
         text-decoration: none;
         &:hover {
-          color: $secondary-dark-color-B;
+          color: $secondary-dark-color-A;
         }
       }
     }  
