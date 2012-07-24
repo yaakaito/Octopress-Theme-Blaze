@@ -5,8 +5,15 @@ body {
   h1, h2, h3, h4, h5 {
     font-family: $emphasis-font-family;
     font-weight: bold;
+    color: $primary-color;
+    a {
+      color: $primary-color;
+      &:hover {
+        color: $primary-dark-color;
+      }
+    }
   }
-  h1 {
+  > h1 {
     color: $secondary-color-A;
     a {
       color: $secondary-color-A;
@@ -16,31 +23,22 @@ body {
       }
     }
   }
-  h2 , h3, h4 , h5 {
-    color: $primary-color;
-    a {
-      color: $primary-color;
-      &:hover {
-        color: $primary-dark-color;
-      }
-    }
-  }
   time {
     color: $time-color;
     font-family: $time-font-family;
   }
 }
 
-
 article {
-  h1 {
+  h1 , h2 , h3 , h4 , h5 {
+    font-size: 1.5em;
+  }
+
+  >  h1 {
     font-size: 2em;
     &:first-letter {
       font-size: 1.5em;
     }
-  }
-  h2 , h3 , h4 , h5 {
-    font-size: 1.5em;
   }
 }
 
