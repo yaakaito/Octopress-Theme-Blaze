@@ -21,3 +21,9 @@ $time-color: #8a8a8a;
 
 $separator-upper-color: #444444;
 $separator-lower-color: #202020;
+
+
+// HTML5 Elements setup
+article, section, header, footer, aisde {
+  display: block;
+}
