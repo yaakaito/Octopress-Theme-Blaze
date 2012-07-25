@@ -2,9 +2,13 @@
 {% unless category == '0' %}
 <ul>
   {% if post %}
-    <li>{{ post.categories | category_links }}</li>
+    {% for item in post.categories %}
+      <li><a href="{{ root_url }}/blog/categories/{{ item }}/">{{ item }}</a></li>
+    {% endfor %}
   {% else %}
-    <li>{{ page.categories | category_links }}</li>
+    {% for item in page.categories %}
+      <li><a href="{{ root_url }}/blog/categories/{{ item }}/">{{ item }}</a></li>
+    {% endfor %}
   {% endif %}
 </ul>
 {% endunless %}
