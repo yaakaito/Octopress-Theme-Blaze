@@ -4,16 +4,18 @@ single: true
 ---
 
 <article class="clear-fix" role="article">
+  <h1 class="separator">
   {% if index %}
-    <h1><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+    <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
   {% else %}
-    <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
   {% endif %}
+  </h1>
   <aside class="categories" role="complementary">
      {% include post/categories.html %}    
   </aside> 
   {% include article.html %}
-  <footer role="contentinfo">
+  <footer role="contentinfo" class="separator">
     {% unless page.sharing == false %}
       {% include post/sharing.html %}
     {% endunless %}
