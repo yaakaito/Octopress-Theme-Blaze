@@ -5,3 +5,11 @@
   clear: both;
 }
 
+.separator {
+  -webkit-box-shadow: $separator-lower-color 0 1px 0;
+  -o-box-shadow: 0 1px 0 $separator-lower-color;
+  -ms-box-shadow: 0 1px 0 $separator-lower-color;
+  box-shadow: 0 1px 0 $separator-lower-color;
+  border-bottom: 1px solid $separator-upper-color;
+
+}
