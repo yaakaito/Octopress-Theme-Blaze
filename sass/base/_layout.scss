@@ -8,4 +8,16 @@ article {
   width: 56em;
 }
 
-
+aside.pagenation {
+  margin: 40px auto;
+  width: 56em;
+  > p {
+    display: block;
+  }
+  p.pagenation.previous {
+    float: left;
+  }
+  p.pagenation.next {
+    float: right;
+  }
+}

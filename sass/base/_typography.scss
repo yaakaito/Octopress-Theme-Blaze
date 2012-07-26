@@ -53,16 +53,17 @@ article {
       }
     }  
   }
+}
 
-  aside[role='navigation'] {
-    p {
+
+aside.pagenation {
+  p {
+    color: $complementary-color;
+    a {
       color: $complementary-color;
-      a {
-        color: $complementary-color;
-        text-decoration: none;
-        &:hover {
-          color: $complementary-dark-color;
-        }
+      text-decoration: none;
+      &:hover {
+        color: $complementary-dark-color;
       }
     }
   }

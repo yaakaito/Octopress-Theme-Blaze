@@ -34,15 +34,13 @@ single: true
 
 </article>
 {% endif %}
-<aside role="navigation">
-  <p class="meta">
+<aside class="pagenation clear-fix" role="navigation">
     {% if page.previous.url %}
-      <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous Post</a>
+      <p class="previous pagenation"><a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous Post</a></p>
     {% endif %}
     {% if page.next.url %}
-      <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next Post &raquo;</a>
+      <p class="next pagenation"><a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next Post &raquo;</a></p>
     {% endif %}
-  </p>
 </aside>
 
 
