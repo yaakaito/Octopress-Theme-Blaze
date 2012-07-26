@@ -1,5 +1,5 @@
 {% if index %}
-  <section>{ content | excerpt }}</section>
+  <section>{{ content | excerpt }}</section>
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
