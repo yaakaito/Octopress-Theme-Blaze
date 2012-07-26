@@ -86,3 +86,19 @@ nav {
   }
 }
 
+footer {
+
+  > p { 
+    color: $complementary-color;
+    font-size: 0.9em;
+    font-family: $copyright-font-family;
+    font-style: italic;
+    a {
+      color: $complementary-color;
+      &:hover {
+        color: $complementary-dark-color;
+      }
+    }
+  }
+}
+
