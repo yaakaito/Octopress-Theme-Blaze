@@ -1,10 +1,14 @@
 {% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
 {% unless category == '0' %}
-<span class="categories">
+<ul>
   {% if post %}
-    {{ post.categories | category_links }}
+    {% for item in post.categories %}
+      <li><a href="{{ root_url }}/blog/categories/{{ item }}/">{{ item }}</a></li>
+    {% endfor %}
   {% else %}
-    {{ page.categories | category_links }}
+    {% for item in page.categories %}
+      <li><a href="{{ root_url }}/blog/categories/{{ item }}/">{{ item }}</a></li>
+    {% endfor %}
   {% endif %}
-</span>
+</ul>
 {% endunless %}
