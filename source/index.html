@@ -6,7 +6,11 @@ layout: default
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}
-    <article>
+    <article class="separator">
+      <h1><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <aside role="complementary">
+        {% include post/categories.html %}    
+      </aside> 
       {% include article.html %}
     </article>
   {% endfor %}
@@ -20,10 +24,3 @@ layout: default
     {% endif %}
   </div>
 </div>
-<aside class="sidebar">
-  {% if site.blog_index_asides.size %}
-    {% include_array blog_index_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
