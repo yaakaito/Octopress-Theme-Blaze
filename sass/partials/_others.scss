@@ -2,9 +2,9 @@ aside.others {
   > div {
     > section {
       float: left;
-      margin: 0 5px;
+      margin: 0 10px;
       margin-top: 12px;
-      width: 310px;
+      width: 300px;
       height: 280px;
       > h3 {
         margin: 5px;
@@ -38,6 +38,14 @@ aside.others {
             }
           }
         }
+      }
+
+      /* section > p */
+       > p {
+        margin: 5px;
+        margin-right: 10px;
+        padding: 0;
+        text-align: right;
       }
     }
   }

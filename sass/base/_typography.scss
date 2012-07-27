@@ -51,7 +51,7 @@ article {
           color: $secondary-dark-color-A;
         }
       }
-    }  
+    }
   }
 }
 
@@ -64,6 +64,27 @@ aside.pagenation {
       text-decoration: none;
       &:hover {
         color: $complementary-dark-color;
+      }
+    }
+  }
+}
+
+aside.others {
+  h3 {
+    font-size: 1.1em;
+  }
+  li {
+    color: $base-text-color;
+    font-size: 0.9em;
+    a {
+      color: $base-text-color;
+    }
+  }
+  p {
+    > a {
+      color: $secondary-color-A;
+      &:hover {
+        color: $secondary-dark-color-A;
       }
     }
   }
