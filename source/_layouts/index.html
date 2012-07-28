@@ -14,6 +14,9 @@ layout: default
       {% include article.html %}
     </article>
   {% endfor %}
+  <div>
+    {{ content }}
+  </div>
   <div class="pagination">
     {% if paginator.next_page %}
       <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
