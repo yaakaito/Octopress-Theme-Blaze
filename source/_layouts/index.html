@@ -4,8 +4,8 @@ layout: default
 
 <div class="blog-index">
   {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
+  {% for post in site.posts limit: site.index_posts %}
+  {% assign blog-content = site.posts[0].content %}
     <article class="separator">
       <h1><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
       <aside role="complementary">
