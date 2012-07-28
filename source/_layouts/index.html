@@ -4,15 +4,30 @@ layout: default
 
 <div class="blog-index">
   {% assign index = true %}
-  {% for post in site.posts limit: site.index_posts %}
-  {% assign blog-content = site.posts[0].content %}
-    <article class="separator">
-      <h1><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
-      <aside role="complementary">
-        {% include post/categories.html %}    
-      </aside> 
-      {% include article.html %}
+  {% for post in site.posts limit: site.index_posts %} 
+// TODO: articleをインポート
+// index = true で 適当な変数にアサインすればよいのでは 
+    <article class="blog clear-fix separator" role="article">
+      <h1 class="separator">
+        <a href="{{ root_url }}{{ .url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+      </h1>
+  
+      <div class="clear-fix">
+        <aside class="categories" role="complementary">
+         {% include post/categories.html %}     
+        </aside>
+        <div class="clear-fix"> 
+          {% include article.html %}
+          <footer role="contentinfo">
+            {% unless page.sharing == false %}
+              {% include post/sharing.html %}
+            {% endunless %}
+            <p>{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}</p>
+          </footer>
+        </div>
+      </div>
     </article>
+
   {% endfor %}
   <div>
     {{ content }}
