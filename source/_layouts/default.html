@@ -8,7 +8,9 @@
     {{ content | expand_urls: root_url }}
   </div>
   <aside role="complementary" class="others separator clear-fix">
-    {% include aside.html %}    
+    <div class="clear-fix">
+      {% include_array default_asides %}
+    </div>
   </aside>
   <footer role="contentinfo">{% include footer.html %}</footer>
   {% include after_footer.html %}
