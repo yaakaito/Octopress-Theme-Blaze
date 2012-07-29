@@ -27,16 +27,16 @@ layout: default
     </article>
 
   {% endfor %}
-  <div>
+  <aside class="about-me">
     {{ content }}
-  </div>
-  <div class="pagination">
+  </aside>
+  <aside class="pagination clear-fix" role="navigation">
     {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+      <a class="prev" href="{{paginator.next_page}}">&larr; Older Post</a>
     {% endif %}
-    <a href="/blog/archives">Blog Archives</a>
+
     {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+    <a class="next" href="{{paginator.previous_page}}">Newer Post &rarr;</a>
     {% endif %}
-  </div>
+  </aside>
 </div>
