@@ -55,6 +55,21 @@ article {
   }
 }
 
+aside.about-me {
+  p {
+    font-size: 0.8em;
+  }
+  li, ol {
+    font-size: 0.8em;
+  } 
+  a {
+    color: $complementary-color;
+    text-decoration: none;
+    &:hover {
+      color: $complementary-dark-color;
+    }
+  }
+}
 
 aside.pagenation {
   p {
