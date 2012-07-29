@@ -5,8 +5,6 @@ layout: default
 <div class="blog-index">
   {% assign index = true %}
   {% for post in site.posts limit: site.index_posts %} 
-// TODO: articleをインポート
-// index = true で 適当な変数にアサインすればよいのでは 
     <article class="blog clear-fix separator" role="article">
       <h1 class="separator">
         <a href="{{ root_url }}{{ .url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
