@@ -7,7 +7,7 @@ layout: default
   {% for post in site.posts limit: site.index_posts %} 
     <article class="blog clear-fix separator" role="article">
       <h1 class="separator">
-        <a href="{{ root_url }}{{ .url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+        <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
       </h1>
   
       <div class="clear-fix">
