@@ -1,6 +1,6 @@
 {% if index %}
-  <section>{{ content | excerpt }}</section>
-  {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+  <section>{{ post.content | excerpt }}</section>
+  {% capture excerpted %}{{ post.content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
