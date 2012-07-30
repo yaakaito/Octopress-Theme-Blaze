@@ -1,5 +1,11 @@
-.highlight, html .gist .gist-file .gist-syntax .gist-highlight {
-  table td.code { width: 100%; }
+.highlight,
+html .gist .gist-file .gist-syntax .gist-highlight {
+  table td.gutter {
+    display: none;
+  }
+  table td.code { 
+    width: 100%;
+  }
   .line-numbers {
     text-align: right;
     font-size: 13px;
