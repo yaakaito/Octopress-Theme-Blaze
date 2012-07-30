@@ -1,8 +1,27 @@
+{% if site.coderwall_user %}
 <section id="coderwall-badges">
   <h3>Coderwall Badges</h3>
-  <div>
+  <div ng-controller="coderwallController">
     <ul class="badges">
+      {% raw %}
+      <li ng-repeat="badge in badges">
+        <img ng-src="{{badge.badge}}" alt="{{badge.description}}" title="{{badge.name}}" />
+      </li>
+      {% endraw %}
     </ul>
   </div> 
   <p><a href="http://coderwall.com/">Show Coderwall &raquo;</a></p>
+  </div>
+  <script>
+    function coderwallController($scope, $http) {
+    
+      $scope.badges = [];   
+      $http.jsonp("http://coderwall.com/yaakaito.json?callback=JSON_CALLBACK").success(function(data,status,header,config){
+        $scope.badges = data.data.badges;
+        console.log($scope.badges);
+});
+    }
+    
+  </script> 
 </section>
+{% endif %}
