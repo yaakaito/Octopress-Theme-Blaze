@@ -102,15 +102,16 @@ p, li {
  /* @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px); */
 
  /* font-family: $mono !important; */
+
   overflow: scroll;
   overflow-y: hidden;
   display: block;
-  padding: .8em !important;
+  padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  background: $base03 !important;
-  color: $base1 !important;
-  span { color: $base1 !important; }
+  background: $base03;
+  color: $base1;
+  span { color: $base1; }
   span { font-style: normal !important; font-weight: normal !important; }
 
   .c      { color: $base01; font-style: italic; }                     /* Comment */
