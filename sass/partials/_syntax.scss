@@ -189,7 +189,7 @@ p, li {
     margin-bottom: 0;
   }
   margin-bottom: 1.8em;
-  background: $highlight-background;
+  background: $pre-bg;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -206,7 +206,11 @@ pre, .highlight, .gist-highlight {
   &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
 }
 
-.highlight code { @extend .pre-code; background: $highlight-background;}
+.highlight code { 
+  @extend .pre-code;
+  background: $pre-bg;
+}
+
 figure.code {
   background: none;
   padding: 0;
