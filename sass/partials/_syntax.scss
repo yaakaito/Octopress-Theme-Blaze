@@ -65,11 +65,11 @@ pre {
 /*  background: $pre-bg $noise-bg; */ 
   @include border-radius(.4em);
   @extend .mono;
+  margin: 0;
+  padding: 0;
   border: 1px solid $pre-border;
   line-height: 1.45em;
   font-size: 13px;
-  margin-bottom: 2.1em;
-  padding: .8em 1em;
   color: $pre-color;
   overflow: auto;
 }
@@ -103,8 +103,7 @@ p, li {
 .pre-code {
  /* @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px); */
 
- /* font-family: $mono !important; */
-
+  font-family: $pre-font-family;
   overflow: scroll;
   overflow-y: hidden;
   display: block;
@@ -224,7 +223,8 @@ figure.code {
   background: none;
   padding: 0;
   border: 0;
-  margin-bottom: 1.5em;
+//  margin-bottom: 1.5em;
+  margin: 5px;
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;

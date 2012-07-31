@@ -38,7 +38,7 @@ $solarized: dark;
 }
 
 /* non highlighted code colors */
-$pre-bg: $base03;
-$pre-border: #202020;
-$pre-color: $base1;
+$pre-bg: $pre-background-color;
+$pre-border: $pre-border-color;
+$pre-color: $base-text-color;
 

@@ -3,11 +3,14 @@ $global-font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Me
 $emphasis-font-family: 'ヒラギノ角ゴ Pro W6', 'Hiragino Kaku Gothic Pro W6', Meiryo, メイリオ, 'ＭＳ Ｐゴシック', Verdana, Geneva, Arial, Helvetica;
 $time-font-family: Georgia, Constantia, Hoefler Text, serif;
 $copyright-font-family:  Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+$pre-font-family: "Lucida Console", "Monaco", monospace;
 $default-font-size: 12pt;
 
 // Colors
 $base-background-color: #343434;
 $base-text-color: #bebebe;
+$pre-background-color: #2f2f2f;
+$pre-border-color: #202020;
 $primary-color: #00b454;
 $primary-dark-color: #228751;
 $secondary-color-A: #086ca2;
@@ -21,6 +24,7 @@ $time-color: #8a8a8a;
 
 $separator-upper-color: #202020;
 $separator-lower-color: #444444;
+
 
 
 // HTML5 Elements setup
