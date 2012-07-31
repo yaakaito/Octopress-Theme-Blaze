@@ -40,6 +40,13 @@ article {
     }
   }
 
+  a {
+    color: $base-text-color;
+    &:hover {
+      color: $complementary-dark-color;
+    }
+  }
+
   aside {
     li {
       color: $secondary-color-A;
