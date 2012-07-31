@@ -21,11 +21,22 @@ aside.others {
             margin: 5px 0;
           }
         }
-        > ul.github {
+        > ul.repositories {
           list-style: square;
           margin-left: 8px;
-          > li {
+          li {
             margin-left: 15px;
+          }
+          li[data-lang="objective-c"] {
+            color: #43beff;
+          }
+
+          li[data-lang="javascript"] {
+            color: #f15501;
+          }
+
+          li[data-lang="ruby"] {
+            color: #903536;
           }
         }
         > ul.badges {
@@ -50,3 +61,6 @@ aside.others {
     }
   }
 }
+
+
+

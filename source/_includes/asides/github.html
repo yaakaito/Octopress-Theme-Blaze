@@ -1,8 +1,26 @@
+{% if site.github_user %}
 <section id="github-repositories">
   <h3>Github Repositories</h3>
-  <div>
+  <div ng-controller="githubCtlr">
     <ul class="repositories">
+      {% raw %}
+        <li ng-repeat="repo in repos" data-lang="{{ repo.language | lowercase }}">
+          <a href="{{ repo.html_url }}">{{ repo.full_name }}</a>
+        </li>
+      {% endraw %}
     </ul>
   </div> 
   <p><a href="http://github.com/">Show Github &raquo;</a></p>
+  <script>
+    function githubCtlr($scope, $http) {
+      $scope.repos = [];
+      $http.jsonp("https://api.github.com/users/{{ site.github_user }}/repos?page=1&per_page=20&sort=pushed&callback=JSON_CALLBACK").success(function(data,status,header,config){
+        var count = {{ site.github_repo_count }} || 5;
+        for(var i = 0; i < count; i++) {
+          $scope.repos.push(data.data[i]);
+        }
+      });
+    }
+  </script>
 </section>
+{% endif %}
