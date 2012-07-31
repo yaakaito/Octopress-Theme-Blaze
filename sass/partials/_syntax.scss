@@ -7,7 +7,7 @@ html .gist .gist-file .gist-syntax .gist-highlight {
     width: 100%;
   }
   border: 1px solid $pre-border;
-  border-radius: 5px;
+  @include border-radius(5px);
 }
 
 figure.code, .gist-file, pre {
@@ -50,9 +50,12 @@ html .gist .gist-file {
       &:hover { color: $base1; }
     }
     a[href*='#file'] {
-      position: absolute; top: 0; left:0; right:-10px;
+      position: absolute;
+      top: 0;
+      left:0;
+      right:-10px;
       color: #474747;
-      @extend .code-title;
+    /* @extend .code-title; */
       /* &:hover { color: $link-color; } */
     }
     a[href*=raw]{
@@ -85,14 +88,14 @@ p, li {
     @extend .mono;
     display: inline-block;
     white-space: no-wrap;
-    background: #fff;
-    font-size: .8em;
+    background: $pre-bg;
+    font-size: 0.9em;
     line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
-    margin: -1px 0;
+    color: $pre-color;
+    border: 1px solid $pre-border;
+    @include border-radius(5px);
+    padding: 0.2em;
+    margin: -2px 0;
   }
   pre code { 
     font-size: 1em;
@@ -247,11 +250,13 @@ figure.code {
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
+  /*
   border: 1px solid #565656;
   border-top-color: #cbcbcb;
   border-left-color: #a5a5a5;
   border-right-color: #a5a5a5;
   border-bottom: 0;
+  */
 }
 
 .download-source {
