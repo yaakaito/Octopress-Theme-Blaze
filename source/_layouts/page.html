@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div>
-<article role="article">
+<article class="page" role="article">
   {% if page.title %}
   <header>
     <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -23,11 +23,11 @@ layout: default
       {% endunless %}
     </footer>
   {% endunless %}
+  {% if site.disqus_short_name and page.comments == true %}
+    <article class="comments clear-fix" >
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+    </article>
+  {% endif %}
 </article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
 </div>
