@@ -1,0 +1,10 @@
+article.page {
+  > p.meta {
+    display: none;
+  }
+  > article.comments {
+    > h1 {
+      display: none;
+    }
+  }
+}
