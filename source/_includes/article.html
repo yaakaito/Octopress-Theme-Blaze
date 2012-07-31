@@ -1,5 +1,5 @@
 {% if index %}
-  <section>{{ post.content | excerpt }}</section>
+  <section><div ng-non-bindable>{{ post.content | excerpt }}</div></section>
   {% capture excerpted %}{{ post.content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
@@ -7,5 +7,5 @@
     </footer>
   {% endif %}
 {% else %}
-<section>{{ content }}</section>
+<section><div ng-non-bindable>{{ content }}</div></section>
 {% endif %}
