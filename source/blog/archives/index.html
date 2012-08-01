@@ -4,7 +4,7 @@ title: Blog Archive
 footer: false
 ---
 
-<div id="blog-archives" ng-controller="ArchiveCtrl">
+<div class="archives" ng-controller="ArchiveCtrl">
   <input type="text" ng-model="query" placeholder=""/>
   <div ng-repeat="yearArchives in archives">
     <h2 class="separator">{% raw %}{{ yearArchives.year }}{% endraw %}</h2>
