@@ -5,12 +5,13 @@ footer: false
 ---
 
 <div class="archives" ng-controller="ArchiveCtrl">
-  <input type="text" ng-model="query" placeholder=""/>
+  <input type="text" ng-model="query" placeholder="filter words: e.g. 'Angular'"/>
   <div ng-repeat="yearArchives in archives">
     <h2 class="separator">{% raw %}{{ yearArchives.year }}{% endraw %}</h2>
     <section ng-repeat="archive in yearArchives.archives | filter:query">
-      <h3>{% raw %}{{ archive.title}}{% endraw %}</h3>
+      <h3><a href="{{ root_url}}{% raw %}{{ archive.url }}{% endraw %}">{% raw %}{{ archive.title}}{% endraw %}</a></h3>
       <ul>
+        <li>Categories:<li>
         <li ng-repeat="category in archive.categories">
           <a href="{{ root_url }}/blog/categories/{% raw %}{{ category | lowercase }}{% endraw %}/">
             {% raw %}{{ category }}{% endraw %}
@@ -31,7 +32,9 @@ function ArchiveCtrl($scope) {
       current = {year : "{{ year }}", archives : [] }
       $scope.archives.push(current);
     {% endunless %}
-    current_archive = {title: "{{ post.title }}" , categories: []}; 
+    current_archive = {title: "{{ post.title }}"
+                       , url : "{{ post.url }}"
+                       , categories: []}; 
     {% for item in post.categories %}
       current_archive.categories.push("{{ item }}");
     {% endfor %}
