@@ -1,161 +1,148 @@
-$blockquote: $type-border !default;
-$sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
-$serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
-$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
-$header-title-font-family: $heading-font-family !default;
-$header-subtitle-font-family: $heading-font-family !default;
-
-// Fonts
-.heading {
-  font-family: $heading-font-family;
-}
-.sans { font-family: $sans; }
-.serif { font-family: $serif; }
-.mono { font-family: $mono; }
-
-body > header h1 {
-  font-size: 2.2em;
-  @extend .heading;
-  font-family: $header-title-font-family;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
-}
-body > header h2 {
-  font-family: $header-subtitle-font-family;
-}
-
 body {
-  line-height: 1.5em;
-  color: $text-color;
-  @extend .serif;
-}
-h1 {
-  font-size: 2.2em;
-  line-height: 1.2em;
-}
+  color: $base-text-color;
+  font-size: $default-font-size;
+  font-family: $global-font-family;
+  h1, h2, h3, h4, h5 {
+    font-family: $emphasis-font-family;
+    font-weight: bold;
+    color: $primary-color;
+    a {
+      color: $primary-color;
+      &:hover {
+        color: $primary-dark-color;
+      }
+    }
+  }
 
-@media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
-}
-
-#{headings()}{
-  @extend .heading;
-  text-rendering: optimizelegibility;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
-h2, section h1 {
-  font-size: 1.5em;
-}
-h3, section h2, section section h1 {
-  font-size: 1.3em;
-}
-h4, section h3, section section h2, section section section h1 {
-  font-size: 1em;
-}
-h5, section h4, section section h3 {
-  font-size: .9em;
-}
-h6, section h5, section section h4, section section section h3 {
-  font-size: .8em;
-}
-p, blockquote, ul, ol { margin-bottom: 1.5em; }
-
-ul { list-style-type: disc;
-  ul { list-style-type: circle; margin-bottom: 0px;
-    ul { list-style-type: square; margin-bottom: 0px; }}}
-
-ol { list-style-type: decimal;
-  ol { list-style-type: lower-alpha; margin-bottom: 0px;
-    ol { list-style-type: lower-roman; margin-bottom: 0px; }}}
-
-ul, ol { &, ul, ol { margin-left: 1.3em; }}
-
-strong { font-weight: bold; }
-
-em { font-style: italic; }
-
-sup, sub { font-size: 0.8em; position: relative;  display: inline-block; }
-sup { top: -.5em; }
-sub { bottom: -.5em; }
-
-q { font-style: italic;
-  &:before { content: "\201C"; }
-  &:after { content: "\201D"; }
+  time {
+    color: $time-color;
+    font-family: $time-font-family;
+  }
 }
 
-em, dfn { font-style: italic; }
+article {
+  line-height: 1.75em;
+  h1 , h2 , h3 , h4 , h5 {
+    font-size: 1.5em;
+  }
 
-strong, dfn { font-weight: bold; }
+  >  h1 {
+    color: $secondary-color-B;
+    font-size: 2em;
+    &:first-letter {
+      font-size: 1.5em;
+    }
+    a {
+      color: $secondary-color-B;
+      text-decoration: none;
+      &:hover {
+        color: $secondary-dark-color-B;
+      }
+    }
+  }
 
-del, s { text-decoration: line-through; }
+  a {
+    color: $base-text-color;
+    &:hover {
+      color: $complementary-dark-color;
+    }
+  }
 
-abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+  aside {
+    li {
+      color: $secondary-color-A;
+      font-weight: bold;
+      a {
+        color: $secondary-color-A;  
+        text-decoration: none;
+        &:hover {
+          color: $secondary-dark-color-A;
+        }
+      }
+    }
+  }
+}
 
-pre, code, tt { @extend .mono; }
+aside.about-me {
+  p {
+    font-size: 0.8em;
+  }
+  li, ol {
+    font-size: 0.8em;
+  } 
+  a {
+    color: $complementary-color;
+    text-decoration: none;
+    &:hover {
+      color: $complementary-dark-color;
+    }
+  }
+}
 
-sub, sup { line-height: 0; }
+aside.pagenation {
+  p {
+    color: $complementary-color;
+    a {
+      color: $complementary-color;
+      text-decoration: none;
+      &:hover {
+        color: $complementary-dark-color;
+      }
+    }
+  }
+}
 
-hr { margin-bottom: 0.2em; }
+aside.others {
+  h3 {
+    font-size: 1.1em;
+  }
+  li {
+    color: $base-text-color;
+    font-size: 0.9em;
+    a {
+      color: $base-text-color;
+    }
+  }
+  p {
+    > a {
+      color: $secondary-color-A;
+      &:hover {
+        color: $secondary-dark-color-A;
+      }
+    }
+  }
+}
 
-small { font-size: .8em; }
+nav {
+  >ul {
+    >li {
+      color: $primary-color;
+      font-size: 1.2em;
+      font-weight: bold;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+          color: $primary-dark-color;
+        }
+      }
+    }
+  }
+}
 
-big { font-size: 1.2em; }
+footer {
 
-blockquote {
-  $bq-margin: 1.2em;
-  font-style: italic;
-  position: relative;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  padding-left: 1em;
-  border-left: 4px solid rgba($text-color-light, .5);
-  cite {
+  > p { 
+    color: $complementary-color;
+    font-size: 0.9em;
+    font-family: $copyright-font-family;
     font-style: italic;
-    a { color: $text-color-light !important; word-wrap: break-word; }
-    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
+    a {
+      color: $complementary-color;
+      &:hover {
+        color: $complementary-dark-color;
+      }
+    }
   }
-  @media only screen and (min-width: 992px) {
-    padding-left: 1.5em;
-    border-left-width: 4px;
-  }
 }
 
-.pullquote-right:before,
-.pullquote-left:before {
-  /* Reset metrics. */
-  padding: 0;
-  border: none;
-
-  /* Content */
-  content: attr(data-pullquote);
-
-  /* Pull out to the right, modular scale based margins. */
-  float: right;
-  width: 45%;
-  margin: .5em 0 1em 1.5em;
-
-  /* Baseline correction */
-  position: relative;
-  top: 7px;
-  font-size: 1.4em;
-  line-height: 1.45em;
-}
-
-.pullquote-left:before {
-  /* Make left pullquotes align properly. */
-  float: left;
-  margin: .5em 1.5em 1em 0;
-}
-
-/* @extend this to force long lines of continuous text to wrap */
-.force-wrap {
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}

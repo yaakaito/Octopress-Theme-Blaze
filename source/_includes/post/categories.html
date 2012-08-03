@@ -1,10 +1,24 @@
 {% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
 {% unless category == '0' %}
-<span class="categories">
+<ul ng-controller="CategoryCtrl">
+  <li ng-repeat="category in categories">
+    <a href="{{ root_url }}/blog/categories/{% raw %}{{ category | lowercase }}{% endraw %}/">
+      {% raw %}{{ category }}{% endraw %}
+    </a>
+  </li>
+</ul>
+<script>
+function CategoryCtrl($scope) {
+  $scope.categories = [];
   {% if post %}
-    {{ post.categories | category_links }}
+    {% for item in post.categories %}
+      $scope.categories.push("{{ item }}");
+    {% endfor %}
   {% else %}
-    {{ page.categories | category_links }}
+    {% for item in page.categories %}
+      $scope.categories.push("{{ item }}");
+    {% endfor %}
   {% endif %}
-</span>
+}
+</script>
 {% endunless %}

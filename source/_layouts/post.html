@@ -3,41 +3,44 @@ layout: default
 single: true
 ---
 
-<div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
-    </p>
-    {% unless page.sharing == false %}
-      {% include post/sharing.html %}
-    {% endunless %}
-    <p class="meta">
-      {% if page.previous.url %}
-        <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </p>
-  </footer>
-</article>
+<article class="blog clear-fix separator" role="article">
+  <h1 class="separator">
+    {% if index %}
+      <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+    {% else %}
+      {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
+    {% endif %}
+  </h1>
+  
+  <div class="clear-fix">
+    <aside class="categories" role="complementary">
+       {% include post/categories.html %}    
+    </aside>
+    <div class="clear-fix"> 
+      {% include article.html %}
+      <footer role="contentinfo">
+        {% unless page.sharing == false %}
+          {% include post/sharing.html %}
+        {% endunless %}
+        <p>{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}</p>
+      </footer>
+    </div>
+  </div>
 {% if site.disqus_short_name and page.comments == true %}
-  <section>
+  <article class="comments" class="clear-fix">
     <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
+  </article>
 {% endif %}
-</div>
-{% unless page.sidebar == false %}
-<aside class="sidebar">
-  {% if site.post_asides.size %}
-    {% include_array post_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+</article>
+
+<aside class="pagenation clear-fix" role="navigation">
+    {% if page.previous.url %}
+      <p class="previous pagenation"><a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous Post</a></p>
+    {% endif %}
+    {% if page.next.url %}
+      <p class="next pagenation"><a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next Post &raquo;</a></p>
+    {% endif %}
 </aside>
-{% endunless %}
+
+

@@ -1,0 +1,19 @@
+article.page {
+  > p.meta {
+    display: none;
+  }
+  > article.comments {
+    > h1 {
+      display: none;
+    }
+  }
+  > footer {
+    height: auto;
+    margin: none;
+    margin-top: 5px;
+    maring-bottom: 5px;
+    > p {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+aside.others {
+  > div {
+    > section {
+      float: left;
+      margin: 0 10px;
+      margin-top: 12px;
+      width: 300px;
+      height: 280px;
+      > h3 {
+        margin: 5px;
+        padding: 0;
+      }
+      > div {
+        display: block;
+        height: 210px;
+        > ul {
+          margin: 10px 5px;
+          padding: 0;
+          list-style: none;
+          > li {
+            margin: 5px 0;
+          }
+        }
+        > ul.repositories {
+          list-style: square;
+          margin-left: 8px;
+          li {
+            margin-left: 15px;
+          }
+          li[data-lang="objective-c"] {
+            color: #43beff;
+          }
+
+          li[data-lang="javascript"] {
+            color: #f15501;
+          }
+
+          li[data-lang="ruby"] {
+            color: #903536;
+          }
+        }
+        > ul.badges {
+          > li {
+            display: inline;
+            margin: 2px;
+            > img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+      }
+
+      /* section > p */
+       > p {
+        margin: 5px;
+        margin-right: 10px;
+        padding: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+
