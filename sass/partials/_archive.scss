@@ -29,13 +29,15 @@ div.archives {
   }
   section {
     margin: 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     h3 {
       &:first-letter {
         font-size: 1.2em;
+        margin-bottom: 5px;
       }
       > a {
         color: $primary-color;
+        text-decoration: none;
         &:hover {
           color: $primary-dark-color;
         }
