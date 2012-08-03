@@ -1,14 +1,16 @@
 # Octopress Theme Blaze
-"Blaze", a my blog template.
-e.g. http://yaakaito.gituhb.com/
+"Blaze", a [my blog](http://yaakaito.gituhb.com/) template.
+
+## Warning
+This template, a prototype. Have no support diverse default functions.
+I'll support functions, if needs it.
+if you want a function, please Pull Reuqest.
 
 ## feature
-- import Angular.js
- - Archives filter
-- Plugings
- - Language marked Github
- - Coderwall Badges
-
+* Angular.js
+  * Archives filter
+  * Rewirited github, coderwall and recent_archives
+ 
 ## Install
 ```
 cd octopress/.theme

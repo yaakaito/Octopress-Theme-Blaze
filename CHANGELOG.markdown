@@ -1,2 +1,3 @@
 # 0.1
-- My Octopress Template
+* first release
+  * not supported videos, images, youtubes, gist
