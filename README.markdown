@@ -3,12 +3,10 @@
 e.g. http://yaakaito.gituhb.com/
 
 ## feature
-- import Angular.js
- - Archives filter
-- Plugings
- - Language marked Github
- - Coderwall Badges
-
+* Angular.js
+  * Archives filter
+  * Rewirited github, coderwall and recent_archives
+ 
 ## Install
 ```
 cd octopress/.theme
