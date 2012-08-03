@@ -19,6 +19,15 @@ article.blog {
       > section {
         margin-bottom: 2em;
       }
+      > footer {
+        height: auto;
+        margin: none;
+        margin-top: 5px;
+        maring-bottom: 5px;
+        > p {
+          text-align: right;
+        }
+      }
     }
   }
   > article.comments {
