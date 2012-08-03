@@ -109,8 +109,8 @@ p, li {
     -ms-box-shadow: 0 1px 0 $separator-lower-color;
     box-shadow: 0 1px 0 $separator-lower-color;
     @include border-radius(5px);
-    padding: 0.2em;
-    margin: -2px 0;
+    padding: 0.4em;
+    margin: -0.4em 0.2em;
   }
   pre code { 
     font-size: 1em;
@@ -229,7 +229,6 @@ figure.code {
   background: none;
   padding: 0;
   border: 0;
-//  margin-bottom: 1.5em;
   margin: 5px;
   pre { margin-bottom: 0; }
   figcaption {
@@ -253,13 +252,6 @@ figure.code {
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
-  /*
-  border: 1px solid #565656;
-  border-top-color: #cbcbcb;
-  border-left-color: #a5a5a5;
-  border-right-color: #a5a5a5;
-  border-bottom: 0;
-  */
 }
 
 .download-source {
