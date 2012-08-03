@@ -2,7 +2,7 @@
 "Blaze", a [my blog](http://yaakaito.gituhb.com/) template.
 
 ## Warning
-This template, a prototype. Have no support diverse default functions.
+This version is  prototype. Has no supported diverse default functions.
 I'll support functions, if needs it.
 if you want a function, please Pull Reuqest.
 
