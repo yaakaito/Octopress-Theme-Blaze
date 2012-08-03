@@ -6,7 +6,12 @@ html .gist .gist-file .gist-syntax .gist-highlight {
   table td.code { 
     width: 100%;
   }
-  border: 1px solid $pre-border;
+    border: 1px solid $separator-upper-color;
+    border-radius: 1.2em;
+    -webkit-box-shadow: $separator-lower-color 0 1px 0;
+    -o-box-shadow: 0 1px 0 $separator-lower-color;
+    -ms-box-shadow: 0 1px 0 $separator-lower-color;
+    box-shadow: 0 1px 0 $separator-lower-color;
   @include border-radius(5px);
 }
 
@@ -70,7 +75,12 @@ pre {
   @extend .mono;
   margin: 0;
   padding: 0;
-  border: 1px solid $pre-border;
+  border: 1px solid $separator-upper-color;
+  border-radius: 1.2em;
+  -webkit-box-shadow: $separator-lower-color 0 1px 0;
+  -o-box-shadow: 0 1px 0 $separator-lower-color;
+  -ms-box-shadow: 0 1px 0 $separator-lower-color;
+  box-shadow: 0 1px 0 $separator-lower-color;
   line-height: 1.45em;
   font-size: 13px;
   color: $pre-color;
@@ -92,10 +102,15 @@ p, li {
     font-size: 0.9em;
     line-height: 1.5em;
     color: $pre-color;
-    border: 1px solid $pre-border;
+    border: 1px solid $separator-upper-color;
+    border-radius: 1.2em;
+    -webkit-box-shadow: $separator-lower-color 0 1px 0;
+    -o-box-shadow: 0 1px 0 $separator-lower-color;
+    -ms-box-shadow: 0 1px 0 $separator-lower-color;
+    box-shadow: 0 1px 0 $separator-lower-color;
     @include border-radius(5px);
-    padding: 0.2em;
-    margin: -2px 0;
+    padding: 0.4em;
+    margin: -0.4em 0.2em;
   }
   pre code { 
     font-size: 1em;
@@ -205,18 +220,6 @@ $solar-scroll-thumb: rgba(#fff, .2);
   $solar-scroll-thumb: rgba(#000, .15);
 }
 
-pre, .highlight, .gist-highlight {
-  &::-webkit-scrollbar {
-    height: .5em;
-    background: $solar-scroll-bg;
-  }
-  &::-webkit-scrollbar-thumb:horizontal {
-    background: $solar-scroll-thumb;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-  }
-}
-
 .highlight code { 
   @extend .pre-code;
   background: $pre-bg;
@@ -226,7 +229,6 @@ figure.code {
   background: none;
   padding: 0;
   border: 0;
-//  margin-bottom: 1.5em;
   margin: 5px;
   pre { margin-bottom: 0; }
   figcaption {
@@ -250,13 +252,6 @@ figure.code {
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
-  /*
-  border: 1px solid #565656;
-  border-top-color: #cbcbcb;
-  border-left-color: #a5a5a5;
-  border-right-color: #a5a5a5;
-  border-bottom: 0;
-  */
 }
 
 .download-source {

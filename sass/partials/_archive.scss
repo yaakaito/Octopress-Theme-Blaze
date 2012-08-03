@@ -4,32 +4,40 @@ div.archives {
     margin: 0 auto;
     padding: 0.2em;
     width: 20em;
-    height: 2.5em;
+    height: 2.4em;
     color: $base-text-color;
     font-size: 1.5em;
     font-weight: bold;
-    border: none;
-    border-bottom: 2px solid $pre-border-color;
+    font-style: italic;
+    text-indent: 1em;
     background-color: $pre-background-color;
+    border: 1px solid $separator-upper-color;
+    border-radius: 1.2em;
+    -webkit-box-shadow: $separator-lower-color 0 1px 0;
+    -o-box-shadow: 0 1px 0 $separator-lower-color;
+    -ms-box-shadow: 0 1px 0 $separator-lower-color;
+    box-shadow: 0 1px 0 $separator-lower-color;
     &::-webkit-input-placeholder {
-      color: $secondary-dark-color-A;
+      color: $secondary-color-A;
     }
     &:-moz-placeholder {
-      color: $secondary-dark-color-A;
+      color: $secondary-color-A;
     } 
     &:placeholder {
-      color: $secondary-dark-color-A;
+      color: $secondary-color-A;
     }
   }
   section {
     margin: 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     h3 {
       &:first-letter {
         font-size: 1.2em;
+        margin-bottom: 5px;
       }
       > a {
         color: $primary-color;
+        text-decoration: none;
         &:hover {
           color: $primary-dark-color;
         }

@@ -7,4 +7,13 @@ article.page {
       display: none;
     }
   }
+  > footer {
+    height: auto;
+    margin: none;
+    margin-top: 5px;
+    maring-bottom: 5px;
+    > p {
+      text-align: right;
+    }
+  }
 }
