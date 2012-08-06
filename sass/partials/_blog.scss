@@ -1,31 +1,65 @@
 article.blog {
-  > div {
-    display: block;
-    margin: 10px auto;
-    width: 48em;
-    > aside.categories {
-      float: left;
-      width: 12em;
-      > ul {
-        width: 100%;
-        list-style: none;
+  @media only screen and (min-width: 481px) {
+    > div {
+      display: block;
+      margin: 10px auto;
+      width: 48em;
+      > aside.categories {
+        float: left;
+        width: 12em;
+        > ul {
+          width: 100%;
+          list-style: none;
+        }
+      }
+      > div {
+        float: right;
+        margin: 0;
+        padding: 0;
+        width: 36em;
+        > section {
+          margin-bottom: 2em;
+        }
+        > footer {
+          height: auto;
+          margin: none;
+          margin-top: 5px;
+          maring-bottom: 5px;
+          > p {
+            text-align: right;
+          }
+        }
       }
     }
+  }
+  @media only screen and (max-width: 480px) {
     > div {
-      float: right;
-      margin: 0;
-      padding: 0;
-      width: 36em;
-      > section {
-        margin-bottom: 2em;
+      display: block;
+      width: 100%;
+      > aside.categories {
+        margin: 5px;
+        padding: 0;
+        > ul {
+          list-style:none;
+          > li {
+            display: inline;
+          }  
+        }
       }
-      > footer {
-        height: auto;
-        margin: none;
-        margin-top: 5px;
-        maring-bottom: 5px;
-        > p {
-          text-align: right;
+      > div > section {
+        p, h1, h2, h3, h4, h5, h6 {
+          display: block;
+          margin: 5px auto;
+          width: 85%;
+        }
+        p {
+          text-align: justify;
+          font-size: 0.9em;
+          /*line-height: 1.75em;*/
+        }
+        figure {
+          margin: 5px auto;
+          width: 100%;
         }
       }
     }

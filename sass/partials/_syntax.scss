@@ -1,3 +1,4 @@
+
 .highlight,
 html .gist .gist-file .gist-syntax .gist-highlight {
   table td.gutter {
@@ -6,25 +7,31 @@ html .gist .gist-file .gist-syntax .gist-highlight {
   table td.code { 
     width: 100%;
   }
-    border: 1px solid $separator-upper-color;
-    border-radius: 1.2em;
-    -webkit-box-shadow: $separator-lower-color 0 1px 0;
-    -o-box-shadow: 0 1px 0 $separator-lower-color;
-    -ms-box-shadow: 0 1px 0 $separator-lower-color;
-    box-shadow: 0 1px 0 $separator-lower-color;
+  border: 1px solid $separator-upper-color;
+  border-radius: 1.2em;
+  -webkit-box-shadow: $separator-lower-color 0 1px 0;
+  -o-box-shadow: 0 1px 0 $separator-lower-color;
+  -ms-box-shadow: 0 1px 0 $separator-lower-color;
+  box-shadow: 0 1px 0 $separator-lower-color;
   @include border-radius(5px);
+  @media only screen and (max-width: 480px) {
+    border-right: none;
+    border-left: none;
+    @include border-radius(0);
+  }
 }
 
 figure.code, .gist-file, pre {
   @include box-shadow(rgba(#000, .06) 0 0 10px);
-  .highlight pre { @include box-shadow(none); }
+  .highlight pre { 
+     @include box-shadow(none);
+  }
 }
 
 html .gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
   border: none;
-  padding-top: image-height("code_bg.png");
   .gist-syntax {
     border-bottom: 0;
     background: none;
@@ -39,7 +46,7 @@ html .gist .gist-file {
    padding: .6em 0.8em;
    border: 1px solid lighten($base02, 2);
    color: $base01;
-   font-size: .7em;
+   font-size: 12px;
    @if $solarized == light {
      background: lighten($base03, 2);
      border: 1px solid $pre-border;
@@ -47,7 +54,6 @@ html .gist .gist-file {
    } @else {
      background: $base02;
    }
-   @extend .sans;
    line-height: 1.5em;
     a {
       color: mix($base1, $base01);
@@ -60,8 +66,6 @@ html .gist .gist-file {
       left:0;
       right:-10px;
       color: #474747;
-    /* @extend .code-title; */
-      /* &:hover { color: $link-color; } */
     }
     a[href*=raw]{
       @extend .download-source;
@@ -70,9 +74,10 @@ html .gist .gist-file {
   }
 }
 pre {
-/*  background: $pre-bg $noise-bg; */ 
   @include border-radius(.4em);
-  @extend .mono;
+  @media only screen and (max-width: 480px) {
+    @include border-radius(0);
+  }
   margin: 0;
   padding: 0;
   border: 1px solid $separator-upper-color;
@@ -81,8 +86,11 @@ pre {
   -o-box-shadow: 0 1px 0 $separator-lower-color;
   -ms-box-shadow: 0 1px 0 $separator-lower-color;
   box-shadow: 0 1px 0 $separator-lower-color;
-  line-height: 1.45em;
-  font-size: 13px;
+  line-height: 1.25em;
+  font-size: 1.0em;
+  @media only screen and (max-width: 480px) {
+    font-size: 0.8em;
+  }
   color: $pre-color;
   overflow: auto;
 }
@@ -99,8 +107,8 @@ p, li {
     display: inline-block;
     white-space: no-wrap;
     background: $pre-bg;
-    font-size: 0.9em;
-    line-height: 1.5em;
+    font-size: 1.0em;
+    line-height: 1.2em;
     color: $pre-color;
     border: 1px solid $separator-upper-color;
     border-radius: 1.2em;
@@ -109,23 +117,23 @@ p, li {
     -ms-box-shadow: 0 1px 0 $separator-lower-color;
     box-shadow: 0 1px 0 $separator-lower-color;
     @include border-radius(5px);
-    padding: 0.4em;
-    margin: -0.4em 0.2em;
+    padding: 0.2em;
+    margin: -0.2em 0.2em;
   }
   pre code { 
-    font-size: 1em;
+    font-size: 0.8em;
     background: none; border: none;
   }
 }
 
+
 .pre-code {
- /* @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px); */
 
   font-family: $pre-font-family;
   overflow: scroll;
   overflow-y: hidden;
   display: block;
-  padding: .8em;
+  padding: 0.8em;
   overflow-x: auto;
   line-height: 1.45em;
   background: $base03;
@@ -243,8 +251,8 @@ figure.code {
 
 .code-title {
   text-align: center;
-  font-size: 13px;
-  line-height: 2em;
+  font-size: 0.8em;
+  line-height: 1.2em;
   text-shadow: #cbcccc 0 1px 0;
   color: #474747;
   font-weight: normal;
@@ -259,7 +267,7 @@ figure.code {
   @include hover-link;
   color: #666; 
   z-index: 1;
-  font-size: 13px;
+  font-size: 0.8em;
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
