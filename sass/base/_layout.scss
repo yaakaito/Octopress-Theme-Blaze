@@ -1,21 +1,34 @@
+$article-width: 56em;
+$article-width-mobile: 100%;
 body {
+  -webkit-text-size-adjust: none;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 article {
   margin: 2em auto;
   width: 56em;
+  @media only screen and (max-width: 480px) {
+    width: $article-width-mobile;
+  }
+
 }
 
 aside.about-me {
   margin: 80px auto;
   width: 56em;
+  @media only screen and (max-width: 480px) {
+    width: $article-width-mobile;
+  }
 }
 
 aside.pagenation {
   margin: 40px auto;
   width: 56em;
+  @media only screen and (max-width: 480px) {
+    width: $article-width-mobile;
+  }
   > p {
     display: block;
   }
