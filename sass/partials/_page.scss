@@ -7,6 +7,29 @@ article.page {
       display: none;
     }
   }
+  @media only screen and (max-width: 480px) {
+    p, h1, h2, h3, h4, h5, h6, ul {
+      display: block;
+      margin: 5px auto;
+      width: 85%;
+    }
+    p {
+      text-align: justify;
+      font-size: 0.9em;
+      /*line-height: 1.75em;*/
+    }
+    li {
+      word-break: break-all;
+    }
+    figure {
+      margin: 5px auto;
+      width: 100%;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 3px;
+  }
   > footer {
     height: auto;
     margin: none;
