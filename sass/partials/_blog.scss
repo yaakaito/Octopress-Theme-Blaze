@@ -3,20 +3,23 @@ article.blog {
     > div {
       display: block;
       margin: 10px auto;
-      width: 48em;
+      width: 56em;
       > aside.categories {
         float: left;
-        width: 12em;
+        width: 11em;
         > ul {
+          padding: 0;
+          margin: 1em 1em 1em 0;
           width: 100%;
           list-style: none;
+          text-align: right;
         }
       }
       > div {
         float: right;
         margin: 0;
         padding: 0;
-        width: 36em;
+        width: 44em;
         > section {
           margin-bottom: 2em;
         }
