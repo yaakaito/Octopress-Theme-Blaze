@@ -129,14 +129,13 @@ aside.others {
 nav {
   >ul {
     >li {
-      color: $primary-color;
-      font-size: 1.2em;
-      font-weight: bold;
+      color: $secondary-color-A;
+      font-size: 1.4em;
       a {
-        color: $primary-color;
+        color: $secondary-color-A;
         text-decoration: none;
         &:hover {
-          color: $primary-dark-color;
+          color: $secondary-dark-color-A;
         }
       }
     }
