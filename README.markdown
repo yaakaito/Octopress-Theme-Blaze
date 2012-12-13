@@ -1,5 +1,5 @@
 # Octopress Theme Blaze
-"Blaze", a [my blog](http://yaakaito.gituhb.com/) template.
+"Blaze", a [my blog](http://yaakaito.github.com/) template.
 
 ## Warning
 This version is  prototype. Has no supported diverse default functions.
