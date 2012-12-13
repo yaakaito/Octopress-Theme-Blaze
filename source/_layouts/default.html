@@ -4,6 +4,7 @@
   <header role="banner" class="clear-fix">
     {% include header.html %}
   </header>
+  <nav role="navigation">{% include custom/navigation.html %}</nav>
   <div role="main" class="separator">
     {{ content | expand_urls: root_url }}
   </div>

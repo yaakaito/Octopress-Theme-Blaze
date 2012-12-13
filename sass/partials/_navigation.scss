@@ -1,7 +1,8 @@
-body > header > nav {
-  float: right;
+body >  nav {
+  text-align: right;
   ul {
     margin: 5px;
+    padding: 0;
     list-style: none;
     li {
       display: inline-block;

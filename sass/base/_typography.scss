@@ -30,6 +30,10 @@ article {
     }
   }
 
+  h3, h4, h5 {
+    font-size: 1.2em;
+  }
+
   >  h1 {
     color: $secondary-color-B;
     font-size: 2em;
@@ -130,7 +134,8 @@ nav {
   >ul {
     >li {
       color: $secondary-color-A;
-      font-size: 1.4em;
+      font-size: 1.2em;
+      font-weight: bold;
       a {
         color: $secondary-color-A;
         text-decoration: none;
